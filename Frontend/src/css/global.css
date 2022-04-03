@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap");
+:root {
+    --clr-gray: #e9e9f0;
+    --clr-mid-gray: #363a3f;
+    --clr-dark-gray: #2f3135;
+    --clr-primary: #fa0038;
+    --clr-primary-desat: #e6213c;
+    --clr-success: #1dd416;
+    --clr-dark: #202226;
+}
+
+a {
+    color: var(--clr-dark);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--clr-primary-desat);
+}
+
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Remove default padding */
+
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+
+/* Remove default margin */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+
+/* Set core body defaults */
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--clr-gray);
+    color: var(--clr-dark);
+}
+
+
+/* Remove list styles on ul, ol elements with a class attribute */
+
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+
+/* A elements that don't have a class get default styles */
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+
+/* Make images easier to work with */
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Natural flow and rhythm in articles by default */
+
+article>*+* {
+    margin-top: 1em;
+}
+
+
+/* Inherit fonts for inputs and buttons */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* Remove all animations and transitions for people that prefer not to see them */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-inline: 2rem;
+}
+
+.btn {
+    padding: 0.5em;
+    border: none;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.btn-primary {
+    background-color: var(--clr-primary-desat);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: var(--clr-primary-desat);
+}
+
+.btn-success {
+    background-color: var(--clr-success);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--clr-primary);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: var(--clr-success);
+    color: white;
+}
+
+.card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 5px 5px #00000015;
+    margin-top: 3rem;
+}
+
+.form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.form-group .input {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 0.3em;
+    border: 1px solid var(--clr-gray);
+}
+
+.form-group .checkbox {
+    padding: 0.5rem;
+    border-radius: 0.3em;
+    border: 1px solid var(--clr-gray);
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+}
+
+.form-group label {
+    cursor: pointer;
+}
+
+.form button {
+    text-transform: uppercase;
+}
